@@ -11,20 +11,21 @@ import Foundation
 print("Hello, World!")
 
 
-var employeesOfCompany = Stack <Node>()
-print(employeesOfCompany.valuesOfStack)
 
-var employee1 = Node(titleOfJob:"Director")
-employeesOfCompany.push(value: employee1)
-var employee2 = Node(titleOfJob:"CEO")
-employeesOfCompany.push(value: employee2)
-var employee3 = Node(titleOfJob:"Marketing")
-employeesOfCompany.push(value: employee3)
+var employeesOfCompany2 = Queue <Node>()
+print(employeesOfCompany2.valuesOfQueue)
 
-print(employeesOfCompany.valuesOfStack.count)
-while !(employeesOfCompany.isEmpty()){
-    let testing = employeesOfCompany.peek()!
-    print(testing.description!)
-    employeesOfCompany.pop()
+var employe1 = Node(titleOfJob:"Director")
+employeesOfCompany2.add(value: employe1)
+var employe2 = Node(titleOfJob:"CEO")
+employeesOfCompany2.add(value: employe2)
+var employe3 = Node(titleOfJob:"Marketing")
+employeesOfCompany2.add(value: employe3)
 
+print(employeesOfCompany2.valuesOfQueue.count)
+while !(employeesOfCompany2.isEmpty()){
+    let testing2 = employeesOfCompany2.dequeue()
+    print(testing2.description!)
+    employeesOfCompany2.remove()
 }
+
