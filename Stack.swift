@@ -60,7 +60,7 @@ let check = addToSet(elemnt: value)
     
     func resizingStack(capacity: Int){
         valuesOfStack.reserveCapacity(_:capacity)
-        maximumCapacity=valuesOfStack.count
+        maximumCapacity = valuesOfStack.count
         print(maximumCapacity)
     }
      
