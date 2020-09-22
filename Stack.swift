@@ -1,8 +1,17 @@
+//
+//  Stack.swift
+//
+//
+//  Created by Asal 2 on 22/09/2020.
+//  Copyright © 2020 Asal 2. All rights reserved.
+//
+
+import Foundation
 
 
 import Foundation
 
-class Stack <T: Hashable & Comparable>{
+class NewStack <T: Hashable & Comparable>{
     var maximumCapacity:Int?
     var valuesOfStack = [T] ()
   private  var set = Set<T>()
@@ -62,10 +71,8 @@ func sortElements(){
     }
     
     func resizingStack(capacity: Int){
-        print("entered resizing")
         maximumCapacity = capacity
         valuesOfStack.reserveCapacity(_:capacity)
-        print(maximumCapacity)
     }
      
   
@@ -86,7 +93,7 @@ func sortElements(){
         if isEmpty() {
             print("Stack is Empty")
         }
-        var trash = peek()
+        let trash = peek()
         set.remove(trash!)
         valuesOfStack.removeLast()
 

@@ -1,12 +1,20 @@
+//
+//  main.swift
+//  test
+//
+//  Created by Asal 2 on 22/09/2020.
+//  Copyright © 2020 Asal 2. All rights reserved.
+//
 
+import Foundation
 
-var intgrStk = Stack <Int> (size: 4)
+var intgrStk = NewStack <Int> (size: 4)
 intgrStk.push(value : 7)
-//intgrStk.push(value : 7)
+intgrStk.push(value : 7)
 intgrStk.push(value : 3)
-//intgrStk.push(value : 4)
 intgrStk.push(value : 4)
-//intgrStk.push(value : 3)
+intgrStk.push(value : 4)
+intgrStk.push(value : 3)
 intgrStk.push(value : 8)
 intgrStk.resizingStack(capacity: 7)
 intgrStk.push(value : 81)
@@ -51,3 +59,38 @@ while !(employeesOfCompany.isEmpty()){
     employeesOfCompany.pop()
 }
 */
+
+print("////////////Queue////////////")
+var intgrQ = NewQueue <Int> (size: 4)
+intgrQ.add(value : 7)
+intgrQ.add(value : 7)
+intgrQ.add(value : 3)
+intgrQ.add(value : 4)
+intgrQ.add(value : 4)
+intgrQ.add(value : 3)
+intgrQ.add(value : 8)
+intgrQ.resizingStack(capacity: 7)
+intgrQ.add(value : 81)
+intgrQ.add(value : 89)
+
+intgrQ.insertAt(index: 2, value: 1)
+
+intgrQ.sortElements()
+print(intgrQ.valuesOfQueue)
+intgrQ.removeAt(index: 2)
+intgrQ.resizingStack(capacity: 10)
+
+intgrQ.add(value: 6)
+intgrQ.add(value: 33)
+
+intgrQ.insertAt(index: 4, value: 1)
+print(intgrQ.valuesOfQueue)
+
+while !(intgrQ.isEmpty()){
+    let testing = intgrQ.dequeue()
+    print(testing )
+    intgrQ.remove()
+}
+print(intgrQ.valuesOfQueue)
+
+
